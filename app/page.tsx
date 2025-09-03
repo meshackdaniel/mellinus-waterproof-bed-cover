@@ -184,7 +184,7 @@ export default function ProductPage() {
               ₦{prices[quantity].price.toLocaleString()}
             </p>
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3 md:gap-6">
               <div className="flex items-center border-2 h-15 border-red-600 py-2 px-2">
                 <button
                   className="px-3 py-1 text-xl font-bold text-red-700"
@@ -211,7 +211,7 @@ export default function ProductPage() {
                 </button>
               </div>
               <button
-                className="bg-red-600 text-white px-8 py-3 h-15 text-lg hover:bg-red-700 transition-transform"
+                className="bg-red-600 text-white px-5 md:px-8 py-3 h-15 text-lg hover:bg-red-700 transition-transform"
                 onClick={() => setModalOpen(true)}
               >
                 Order Now
@@ -679,21 +679,21 @@ export default function ProductPage() {
                   <p className="text-xl md:text-2xl font-bold text-blue-600">
                     50,000+
                   </p>
-                  <p className="text-sm text-gray-600">Happy Customers</p>
+                  <p className="text-xs text-gray-600">Happy Customers</p>
                 </div>
                 <div className="w-px h-8 bg-gray-300"></div>
                 <div className="text-center">
                   <p className="text-xl md:text-2xl font-bold text-green-600">
                     4.9/5
                   </p>
-                  <p className="text-sm text-gray-600">Average Rating</p>
+                  <p className="text-xs text-gray-600">Average Rating</p>
                 </div>
                 <div className="w-px h-8 bg-gray-300"></div>
                 <div className="text-center">
                   <p className="text-xl md:text-2xl font-bold text-purple-600">
                     15 Years
                   </p>
-                  <p className="text-sm text-gray-600">Warranty</p>
+                  <p className="text-xs text-gray-600">Warranty</p>
                 </div>
               </div>
             </div>
