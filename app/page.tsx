@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import AccordionItem from "./components/AccordionItem";
 
 const productImages = [
   "/images/product-4.jpg",
@@ -23,29 +24,6 @@ const faqs = [
     answer: "Click 'Order Now' and fill the form.",
   },
 ];
-
-const testimonials = [
-  {
-    quote: "Amazing product! Highly recommend.",
-    rating: 5,
-  },
-  {
-    quote: "Fast delivery and great customer service.",
-    rating: 4,
-  },
-  {
-    quote: "Quality exceeded my expectations.",
-    rating: 5,
-  },
-];
-
-const priceTable = [
-  { qty: 1, price: "₦10,000" },
-  { qty: 2, price: "₦18,000" },
-  { qty: 5, price: "₦40,000" },
-];
-
-const contactNumbers = ["08012345678", "08087654321"];
 
 export default function ProductPage() {
   const prices = [
@@ -87,8 +65,11 @@ export default function ProductPage() {
     email: "",
     state: "",
   });
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
+  const toggleAccordion = (index: any) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   const handleFormChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
@@ -713,6 +694,22 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto">
+        <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+          Frequently Asked Questions
+        </h3>
+        <div className="bg-white p-4 rounded-b-lg shadow">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              toggle={() => toggleAccordion(index)}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
