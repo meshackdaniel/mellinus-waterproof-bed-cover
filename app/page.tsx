@@ -460,7 +460,7 @@ export default function ProductPage() {
                   </div>
                   <button
                     onClick={closeModal}
-                    className="bg-red-700 px-2 py-1 text-white rounded-lg text-sm"
+                    className="bg-red-700 px-2 py-1 mt-3 text-white rounded-lg text-sm"
                   >
                     Close
                   </button>
@@ -674,19 +674,25 @@ export default function ProductPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="inline-flex items-center space-x-8 bg-white px-8 py-4 rounded-full shadow-lg">
+              <div className="inline-flex items-center space-x-4 md:space-x-8 bg-white px-8 py-4 rounded-full shadow-lg">
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-blue-600">50,000+</p>
+                  <p className="text-xl md:text-2xl font-bold text-blue-600">
+                    50,000+
+                  </p>
                   <p className="text-sm text-gray-600">Happy Customers</p>
                 </div>
                 <div className="w-px h-8 bg-gray-300"></div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-green-600">4.9/5</p>
+                  <p className="text-xl md:text-2xl font-bold text-green-600">
+                    4.9/5
+                  </p>
                   <p className="text-sm text-gray-600">Average Rating</p>
                 </div>
                 <div className="w-px h-8 bg-gray-300"></div>
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-purple-600">15 Years</p>
+                  <p className="text-xl md:text-2xl font-bold text-purple-600">
+                    15 Years
+                  </p>
                   <p className="text-sm text-gray-600">Warranty</p>
                 </div>
               </div>
